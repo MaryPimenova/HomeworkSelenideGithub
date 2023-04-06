@@ -14,7 +14,7 @@ public class DragAndDrop {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         // Проверка верного открытия страницы
         $(".example").shouldHave(text(("Drag and Drop")));
-          $("#column-a").shouldHave(exactText("A"));
+        $("#column-a").shouldHave(exactText("A"));
         $("#column-b").shouldHave(exactText("B"));
 
         //$("#column-b").hover();
