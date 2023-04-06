@@ -18,8 +18,8 @@ public class SelenideRepositorySearch extends FormTestBase {
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
 
         // Далее оба вариант рабочие
-        //$("#wiki-pages-filter").setValue("SoftAssertions");
-        //$("[class = 'm-0 p-0 list-style-none filterable-active']").$(byText("SoftAssertions")).click();
+        // $("#wiki-pages-filter").setValue("SoftAssertions");
+        // $("[class = 'm-0 p-0 list-style-none filterable-active']").$(byText("SoftAssertions")).click();
 
         $("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();
         $("#wiki-body").shouldHave(text("JUnit5 extension"));
