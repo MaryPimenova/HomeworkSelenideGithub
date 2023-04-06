@@ -25,10 +25,9 @@ public class SelenideRepositorySearch extends FormTestBase {
         $("#wiki-body").shouldHave(text("JUnit5 extension"));
 
 
-        /*$("a").$("[class = 'internal present']").$("[href = '/selenide/selenide/wiki/SoftAssertions']").click();
-        $("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();
-        $$(".internal.present").find(href("/selenide/selenide/wiki/SoftAssertions")).click();
-        */
+
+       // $$(".internal.present").find(href("/selenide/selenide/wiki/SoftAssertions")).click();
+
 
 
 
