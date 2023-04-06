@@ -16,9 +16,14 @@ public class SelenideRepositorySearch extends FormTestBase {
         $("#wiki-pages-box").shouldHave(text("    Show 2 more pages…"));
         $("[class = 'f6 Link--muted js-wiki-more-pages-link btn-link mx-auto']").click();
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
-        $("#wiki-pages-filter").setValue("SoftAssertions");
-        $("[class = 'm-0 p-0 list-style-none filterable-active']").$(byText("SoftAssertions")).click();
+
+        // Далее оба вариант рабочие
+        //$("#wiki-pages-filter").setValue("SoftAssertions");
+        //$("[class = 'm-0 p-0 list-style-none filterable-active']").$(byText("SoftAssertions")).click();
+
+        $("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();
         $("#wiki-body").shouldHave(text("JUnit5 extension"));
+
 
         /*$("a").$("[class = 'internal present']").$("[href = '/selenide/selenide/wiki/SoftAssertions']").click();
         $("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();
