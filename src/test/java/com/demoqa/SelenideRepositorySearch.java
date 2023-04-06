@@ -15,14 +15,13 @@ public class SelenideRepositorySearch extends FormTestBase {
         $("#wiki-tab").click();
         $(".markdown-body").shouldHave(text("Soft assertions"));
 
-        // Не могу разобраться, как работает обращение к ссылке через href
-        // $("a").$("[class = 'internal present']").$("[href = 'https://github.com/selenide/selenide/wiki/SoftAssertions']").click();
-        //$("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();
+       /* Не могу разобраться, как работает обращение к ссылке через href
+        $("a").$("[class = 'internal present']").$("[href = '/selenide/selenide/wiki/SoftAssertions']").click();
+        $("a[href = '/selenide/selenide/wiki/SoftAssertions']").click();*/
 
         $("#wiki-pages-filter").setValue("SoftAssertions");
         $("[class = 'm-0 p-0 list-style-none filterable-active']").$(byText("SoftAssertions")).click();
         $("#wiki-body").shouldHave(text("3. Using JUnit5 extend test class:"));
-        sleep(5000);
 
     }
 }
