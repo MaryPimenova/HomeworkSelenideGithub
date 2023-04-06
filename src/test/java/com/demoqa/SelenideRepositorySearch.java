@@ -13,7 +13,6 @@ public class SelenideRepositorySearch extends FormTestBase {
         open("/selenide/selenide");
         $("#repository-container-header").shouldHave(text("selenide / selenide"));
         $("#wiki-tab").click();
-        // $(".markdown-body").shouldHave(text("Soft assertions"));
         $("#wiki-pages-box").shouldHave(text("    Show 2 more pages…"));
         $("[class = 'f6 Link--muted js-wiki-more-pages-link btn-link mx-auto']").click();
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
