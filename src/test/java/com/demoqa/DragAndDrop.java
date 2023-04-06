@@ -16,8 +16,8 @@ public class DragAndDrop {
         $(".example").shouldHave(text(("Drag and Drop")));
         sleep(5000);
         $("#column-a").shouldHave(exactText("A"));
-        $("#column-b").hover();
 
+        //$("#column-b").hover();
         //actions().clickAndHold().moveByOffset(-200, 0).release().perform();
         //$("#column-a").shouldHave(exactText("B"));
 
