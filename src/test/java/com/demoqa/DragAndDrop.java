@@ -14,16 +14,16 @@ public class DragAndDrop {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         // Проверка верного открытия страницы
         $(".example").shouldHave(text(("Drag and Drop")));
-        sleep(5000);
-        $("#column-a").shouldHave(exactText("A"));
+          $("#column-a").shouldHave(exactText("A"));
+        $("#column-b").shouldHave(exactText("B"));
 
         //$("#column-b").hover();
         //actions().clickAndHold().moveByOffset(-200, 0).release().perform();
         //$("#column-a").shouldHave(exactText("B"));
 
         $("#column-a").dragAndDropTo($("#column-b"));
-        sleep(5000);
         $("#column-a").shouldHave(exactText("B"));
+        $("#column-b").shouldHave(exactText("A"));
     }
 
 }
