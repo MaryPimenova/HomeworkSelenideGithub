@@ -66,6 +66,8 @@ public class Snippets {
 
         $(byClassName("red")).click();
         $(".red").click();
+
+        $(byTagAndText("tag", "text")).click();
     }
 
     void actions_examples() {
@@ -109,7 +111,8 @@ public class Snippets {
         //longer timeouts
         $("").shouldBe(visible, Duration.ofSeconds(30));
         //$("").waitUntil(visible, 30000);  //is deprecated
-
+        $("").shouldBe(hidden, Duration.ofSeconds(30));
+        $("").shouldBe(disappear, Duration.ofSeconds(30)); // same as previous
     }
 
     void conditions_examples() {
